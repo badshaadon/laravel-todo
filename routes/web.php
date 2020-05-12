@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'TodoController@index');
 Route::get('/todos', 'TodoController@index');
 Route::get('/todos/{todo}', 'TodoController@show');
+Route::get('/new-todo', 'TodoController@create');
