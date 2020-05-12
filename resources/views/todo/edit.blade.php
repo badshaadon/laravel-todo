@@ -12,7 +12,7 @@
                     Edit Todo
                 </div>
                 <div class="card-body">
-                    <form action="/update" method="post">
+                    <form action="/todos/{{ $todo->id }}/update" method="post">
                         @csrf
                         <div class="form-group">
                             <input class="form-control" type="text" name="name" placeholder="Enter Name" value="{{ $todo->name }}">
