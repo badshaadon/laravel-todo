@@ -18,3 +18,4 @@ Route::get('/todos', 'TodoController@index');
 Route::get('/todos/{todo}', 'TodoController@show');
 Route::get('/new-todo', 'TodoController@create');
 Route::post('/store-todo', 'TodoController@store');
+Route::get('/todos/{todo}/edit', 'TodoController@edit');

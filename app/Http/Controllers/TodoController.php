@@ -40,4 +40,10 @@ class TodoController extends Controller
 
         return redirect('/todos');
     }
+
+    public function edit($todoId)
+    {
+        $todo = Todo::find($todoId);
+        return view('todo.edit')->with('todo', $todo);
+    }
 }
