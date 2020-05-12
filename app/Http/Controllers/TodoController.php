@@ -38,6 +38,8 @@ class TodoController extends Controller
         $todo->compeleted = false;
         $todo->save();
 
+        session()->flash('success', 'Todo Added Created Successfully');
+
         return redirect('/todos');
     }
 
@@ -60,6 +62,8 @@ class TodoController extends Controller
         $todo->description = $data['description'];
         $todo->save();
 
+        session()->flash('success', 'Todo Updated Successfully');
+
         return redirect('/todos');
     }
 
@@ -67,6 +71,9 @@ class TodoController extends Controller
     {
         $todo = Todo::find($todoId);
         $todo->delete();
+
+        session()->flash('success', 'Todo Added Deleted Successfully');
+
         return redirect('/todos');
     }
 
@@ -75,6 +82,8 @@ class TodoController extends Controller
         $todo = Todo::find($todoId);
         $todo->compeleted = true;
         $todo->save();
+
+        session()->flash('success', 'Todo Added Compeleted Successfully');
 
         return redirect('/todos');
     }
