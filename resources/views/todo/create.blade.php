@@ -13,6 +13,7 @@
                 </div>
                 <div class="card-body">
                     <form action="/store-todo" method="post">
+                        @csrf
                         <div class="form-group">
                             <input class="form-control" type="text" name="name" placeholder="Enter Name">
                         </div>
