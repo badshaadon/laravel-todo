@@ -15,6 +15,7 @@
                     {{ $todo->description }}
                 </div>
                 <a class="btn btn-primary" href="/todos/{{ $todo->id }}/edit">Edit</a>
+                <a class="btn btn-primary" href="/todos/{{ $todo->id }}/delete">Delete</a>
             </div>
         </div>
     </div>
