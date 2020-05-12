@@ -69,4 +69,13 @@ class TodoController extends Controller
         $todo->delete();
         return redirect('/todos');
     }
+
+    public function compeleted($todoId)
+    {
+        $todo = Todo::find($todoId);
+        $todo->compeleted = true;
+        $todo->save();
+
+        return redirect('/todos');
+    }
 }
