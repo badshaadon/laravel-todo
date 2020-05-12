@@ -2,11 +2,13 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Model;
+use App\Todo;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(Todo::class, function (Faker $faker) {
     return [
-        //
+        'name' => $faker->sentence(3),
+        'description' => $faker->paragraph(4),
+        'compeleted' => false
     ];
 });
