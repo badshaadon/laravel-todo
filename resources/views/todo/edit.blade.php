@@ -12,6 +12,18 @@
                     Edit Todo
                 </div>
                 <div class="card-body">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="list-group">
+                                @foreach ($errors->all() as $error)
+                                    <li class="list-group m-2 lead">
+                                        {{ $error }}
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    
                     <form action="/todos/{{ $todo->id }}/update" method="post">
                         @csrf
                         <div class="form-group">
