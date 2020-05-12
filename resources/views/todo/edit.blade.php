@@ -6,9 +6,9 @@
 
 @section('content')
     <div class="row justify-content-center">
-        <div class="col-sm-8">
+        <div class="col-sm-10">
             <div class="card card-default">
-                <div class="card-header">
+                <div class="card-header text-center display-1 text-success">
                     Edit Todo
                 </div>
                 <div class="card-body">
@@ -33,7 +33,7 @@
                             <textarea class="w-100" name="description" rows="10" placeholder="Enter Description" value="{{ $todo->description }}"></textarea>
                         </div>
                         <div class="form-group">
-                            <button type="submit">Update Todo</button>
+                            <button class="btn btn-primary btn-block" type="submit">Update Todo</button>
                         </div>
                     </form>
                 </div>
